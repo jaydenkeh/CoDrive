@@ -26,12 +26,15 @@ const quickLinks = [
 ];
 
 const Footer = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
     <footer className="footer">
       <Container>
         <Row>
           <Col lg="4" md="4" sm="12">
-            <div className="logo">
+            <div className="logo footer_logo">
               <h1>
                 <Link to="/home" className="d-flex align-items-center gap-2">
                   <i className="ri-roadster-line"></i>
@@ -39,7 +42,7 @@ const Footer = () => {
                 </Link>
               </h1>
             </div>
-            <p className="footer_logo-cotent">
+            <p className="footer_logo-content">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
               dolores aliquid, fugit dicta molestiae non molestias, temporibus
               reprehenderit modi similique tempora maiores, cupiditate facilis
@@ -51,7 +54,7 @@ const Footer = () => {
               <h5 className="footer_link-title">Quick Links</h5>
               <ListGroup>
                 {quickLinks.map((item, index) => (
-                  <ListGroupItem key={index} className="p-0 mt-3">
+                  <ListGroupItem key={index} className="p-0 mt-3 quick_link">
                     <Link to={item.path}>{item.display}</Link>
                   </ListGroupItem>
                 ))}
@@ -60,7 +63,7 @@ const Footer = () => {
           </Col>
           <Col lg="3" md="4" sm="6">
             <div className="mb-4">
-              <h5 className="footer_link-title">Head Office</h5>
+              <h5 className="footer_link-title mb-4">Head Office</h5>
               <p className="office_info">Singapore</p>
               <p className="office_info">Phone: +65 6666 8888</p>
               <p className="office_info">Email: codrive@gmail.com</p>
@@ -77,6 +80,14 @@ const Footer = () => {
                   <i className="ri-send-plane-line"></i>
                 </span>
               </div>
+            </div>
+          </Col>
+          <Col lg="12">
+            <div className="footer_bottom">
+              <p className="section_description d-flex align-items-center justify-content-center gap-1 pt-4">
+                <i className="ri-copyright-line"></i>Copyright {year}, All
+                rights reserved.
+              </p>
             </div>
           </Col>
         </Row>
