@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
 import "../../styles/header.css";
@@ -67,11 +66,7 @@ const Header = () => {
                 <h1>
                   <Link to="/home" className="d-flex align-items-center gap-2">
                     <i className="ri-roadster-line"></i>
-                    <span>
-                      Rent Car
-                      <br />
-                      Service
-                    </span>
+                    <span>CoDrive</span>
                   </Link>
                 </h1>
               </div>
