@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Container, Row, Col } from "reactstrap";
 import { Link, NavLink } from "react-router-dom";
 import "../../styles/header.css";
@@ -26,6 +27,13 @@ const navLinks = [
 ];
 
 const Header = () => {
+  const menuRef = useRef<HTMLInputElement>(null);
+  const toggleMenu = () => {
+    if (menuRef.current != null) {
+      menuRef.current.classList.toggle("menu_active");
+    }
+  };
+
   return (
     <header className="header">
       <div className="header_top">
@@ -114,7 +122,7 @@ const Header = () => {
             <span className="mobile_menu">
               <i className="ri-menu-line"></i>
             </span>
-            <div className="navigation">
+            <div className="navigation" ref={menuRef} onClick={toggleMenu}>
               <div className="menu">
                 {navLinks.map((item, index) => (
                   <NavLink
