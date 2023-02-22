@@ -4,12 +4,13 @@ import AboutSection from "../components/UI/AboutSection";
 import { Container, Row, Col } from "reactstrap";
 import driveImg from "../assets/all-images/drive.jpg";
 import OurMembers from "../components/UI/OurMembers";
+import "../styles/about.css";
 
 const About = () => {
   return (
     <Helmet title="About">
       <CommonSection title="About Us" />
-      <AboutSection />
+      <AboutSection aboutClass="aboutPage" />
       <section className="about_page-section">
         <Container>
           <Row>

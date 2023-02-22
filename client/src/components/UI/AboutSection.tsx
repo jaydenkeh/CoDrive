@@ -2,9 +2,20 @@ import { Container, Row, Col } from "reactstrap";
 import "../../styles/about-section.css";
 import aboutImg from "../../assets/all-images/cars-img/bmw-offer.png";
 
-const AboutSection = () => {
+interface AboutSectionProps {
+  aboutClass: string;
+}
+
+const AboutSection = ({ aboutClass }: AboutSectionProps) => {
   return (
-    <section>
+    <section
+      className="about_section"
+      style={
+        aboutClass === "aboutPage"
+          ? { marginTop: "0px" }
+          : { marginTop: "280px" }
+      }
+    >
       <Container>
         <Row>
           <Col lg="6" md="6">

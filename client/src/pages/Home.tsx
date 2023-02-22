@@ -30,7 +30,7 @@ const Home = () => {
           </Container>
         </div>
       </section>
-      <AboutSection />
+      <AboutSection aboutClass="" />
       <section>
         <Container>
           <Row>
