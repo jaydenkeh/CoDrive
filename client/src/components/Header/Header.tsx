@@ -27,11 +27,9 @@ const navLinks = [
 ];
 
 const Header = () => {
-  const menuRef = useRef<HTMLInputElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
   const toggleMenu = () => {
-    if (menuRef.current != null) {
-      menuRef.current.classList.toggle("menu_active");
-    }
+    menuRef.current?.classList.toggle("menu_active");
   };
 
   return (
