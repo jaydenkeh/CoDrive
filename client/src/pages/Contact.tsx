@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Container, Col, Row, Form, FormGroup } from "reactstrap";
 import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
+import "../styles/contact.css";
 
 const socialLinks = [
   {
